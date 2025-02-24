@@ -8,13 +8,13 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 # بيانات البريد الإلكتروني
-EMAIL_SENDER = "EMAIL_SENDER"  
-EMAIL_PASSWORD = "PASSWORD_APP"  # كلمة مرور التطبيقات
+EMAIL_SENDER = os.getenv("EMAIL_SENDER")  
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")  # كلمة مرور التطبيقات
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 # توكن بوت تيليجرام
-TOKEN = "TOKEN_TELEGRAME_BOT"
+TOKEN = os.getenv("TOKEN")
 
 # حالات المحادثة
 GET_EMAIL, GET_CV, GET_LANGUAGE = range(3)
